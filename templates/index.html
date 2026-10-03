@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <h1>Scholarship Intelligence</h1>
+  <p>Discover → Crawl → Extract → Verify → Score → Store → Update</p>
+</section>
+
+<section class="metrics">
+  <div class="m"><span class="n">{{ stats.total }}</span><span class="l">Total discovered</span></div>
+  <div class="m"><span class="n">{{ stats.verified }}</span><span class="l">Verified (≥95%)</span></div>
+  <div class="m"><span class="n">{{ stats.review_required }}</span><span class="l">Review required</span></div>
+  <div class="m"><span class="n">{{ stats.active }}</span><span class="l">Active</span></div>
+  <div class="m"><span class="n">{{ stats.expired }}</span><span class="l">Expired</span></div>
+  <div class="m"><span class="n">{{ stats.expiring_soon }}</span><span class="l">Expiring soon</span></div>
+  <div class="m"><span class="n">{{ stats.recently_updated }}</span><span class="l">Recently updated</span></div>
+  <div class="m"><span class="n">{{ stats.avg_confidence }}%</span><span class="l">Avg confidence</span></div>
+  <div class="m"><span class="n">{{ stats.change_events }}</span><span class="l">Change events</span></div>
+</section>
+
+<form class="search" method="get">
+  <input type="search" name="q" value="{{ q }}" placeholder="Search name, provider, eligibility…" />
+  <select name="status">
+    <option value="">All statuses</option>
+    {% for s in ['ACTIVE','EXPIRING_SOON','EXPIRED','REVIEW_REQUIRED','NO_LONGER_VERIFIABLE'] %}
+    <option value="{{ s }}" {% if status==s %}selected{% endif %}>{{ s }}</option>
+    {% endfor %}
+  </select>
+  <select name="label">
+    <option value="">All labels</option>
+    <option value="VERIFIED" {% if label=='VERIFIED' %}selected{% endif %}>VERIFIED</option>
+    <option value="REVIEW_REQUIRED" {% if label=='REVIEW_REQUIRED' %}selected{% endif %}>REVIEW_REQUIRED</option>
+  </select>
+  <button type="submit">Filter</button>
+</form>
+
+<table class="list">
+  <thead>
+    <tr>
+      <th>Scholarship</th>
+      <th>Provider</th>
+      <th>Deadline</th>
+      <th>Status</th>
+      <th>Confidence</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for r in rows %}
+    <tr>
+      <td><a href="/scholarship/{{ r.id }}">{{ r.name }}</a></td>
+      <td>{{ r.provider }}</td>
+      <td>{{ r.closing_date }}</td>
+      <td><span class="pill status-{{ r.lifecycle_status }}">{{ r.lifecycle_status }}</span></td>
+      <td>
+        <strong>{{ '%.1f'|format(r.confidence_score or 0) }}%</strong>
+        <span class="pill label-{{ r.verification_label }}">{{ r.verification_label }}</span>
+      </td>
+      <td>{{ r.source_type }}</td>
+    </tr>
+    {% else %}
+    <tr><td colspan="6">No records yet. Run: <code>scholarship-intel crawl</code></td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

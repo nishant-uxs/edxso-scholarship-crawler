@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% block title %}{{ s.name }} · Scholarship Intelligence{% endblock %}
+{% block content %}
+<p class="back"><a href="/">← Dashboard</a></p>
+<article class="detail">
+  <h1>{{ s.name }}</h1>
+  <p class="sub">{{ s.provider }} · {{ s.source_type }}</p>
+
+  <div class="badges">
+    <span class="pill status-{{ s.lifecycle_status }}">{{ s.lifecycle_status }}</span>
+    <span class="pill label-{{ s.verification_label }}">{{ s.verification_label }}</span>
+    <span class="pill">Confidence {{ '%.1f'|format(s.confidence_score or 0) }}%</span>
+  </div>
+
+  <section>
+    <h2>Scholarship Details</h2>
+    <dl class="grid">
+      <dt>Amount / benefit</dt><dd>{{ s.amount_benefit }}</dd>
+      <dt>Eligibility</dt><dd>{{ s.eligibility }}</dd>
+      <dt>Academic requirements</dt><dd>{{ s.academic_requirements }}</dd>
+      <dt>Education level</dt><dd>{{ s.education_level }}</dd>
+      <dt>Income criteria</dt><dd>{{ s.income_criteria }}</dd>
+      <dt>Age criteria</dt><dd>{{ s.age_criteria }}</dd>
+      <dt>Gender criteria</dt><dd>{{ s.gender_criteria }}</dd>
+      <dt>Category criteria</dt><dd>{{ s.category_criteria }}</dd>
+      <dt>Domicile / state</dt><dd>{{ s.domicile_state }}</dd>
+      <dt>Institution requirements</dt><dd>{{ s.institution_requirements }}</dd>
+      <dt>Opening date</dt><dd>{{ s.opening_date }}</dd>
+      <dt>Closing date</dt><dd>{{ s.closing_date }}</dd>
+      <dt>Documents required</dt><dd>{{ s.documents_required }}</dd>
+      <dt>Selection process</dt><dd>{{ s.selection_process }}</dd>
+      <dt>Renewal</dt><dd>{{ s.renewal_requirements }}</dd>
+      <dt>Official source</dt>
+      <dd><a href="{{ s.official_source_url }}" target="_blank" rel="noopener">{{ s.official_source_url }}</a></dd>
+      <dt>Application link</dt>
+      <dd>{% if s.application_url %}<a href="{{ s.application_url }}" target="_blank" rel="noopener">{{ s.application_url }}</a>{% else %}Not specified{% endif %}</dd>
+      <dt>Last verified</dt><dd>{{ s.last_verified_at }}</dd>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Why this score?</h2>
+    <p>Score is a weighted sum of evidence checks — not an LLM guess.</p>
+    <ul class="reasons">
+      {% for r in conf.get('reasons', []) %}
+      <li>{{ r }}</li>
+      {% endfor %}
+    </ul>
+    <table class="factors">
+      <thead><tr><th>Factor</th><th>Points</th></tr></thead>
+      <tbody>
+        {% for k, v in conf.get('factors', {}).items() %}
+        <tr><td>{{ k }}</td><td>{{ v }}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Source evidence</h2>
+    {% if evidence %}
+    {% for field, ev in evidence.items() %}
+    <div class="ev">
+      <strong>{{ field }}</strong> = {{ ev.value }}
+      <blockquote>{{ ev.snippet }}</blockquote>
+      <a href="{{ ev.source_url }}" target="_blank" rel="noopener">{{ ev.source_url }}</a>
+    </div>
+    {% endfor %}
+    {% else %}
+    <p>No field-level evidence snippets stored (fields may be Not specified).</p>
+    {% endif %}
+  </section>
+
+  <section>
+    <h2>Change history</h2>
+    {% if changes %}
+    <table class="list">
+      <thead><tr><th>When</th><th>Field</th><th>Old</th><th>New</th><th>Source</th></tr></thead>
+      <tbody>
+        {% for c in changes %}
+        <tr>
+          <td>{{ c.detected_at }}</td>
+          <td><strong>CHANGE DETECTED</strong> · {{ c.field }}</td>
+          <td>{{ c.old_value }}</td>
+          <td>{{ c.new_value }}</td>
+          <td class="small">{{ c.source_url }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% else %}
+    <p>No changes detected yet. Run <code>scholarship-intel demo-changes</code> or a second crawl.</p>
+    {% endif %}
+  </section>
+
+  {% if s.raw_excerpt %}
+  <section>
+    <h2>Raw excerpt</h2>
+    <pre class="excerpt">{{ s.raw_excerpt }}</pre>
+  </section>
+  {% endif %}
+</article>
+{% endblock %}

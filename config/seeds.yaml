@@ -1,0 +1,83 @@
+# Seed sources for discovery. The crawler follows links from these pages
+# and classifies new domains — not a hard-coded one-URL-one-scraper list.
+
+seeds:
+  - name: National Scholarship Portal — All Schemes
+    url: https://scholarships.gov.in/All-Scholarships
+    source_type: government_portal
+    discovery_role: listing
+
+  - name: National Scholarship Portal — Home
+    url: https://scholarships.gov.in/
+    source_type: government_portal
+    discovery_role: hub
+
+  - name: UGC — National Scholarship for PG Studies
+    url: https://www.ugc.gov.in/Scholarships/stu_Scholarship6
+    source_type: government
+    discovery_role: detail
+
+  - name: UGC — Ishan Uday
+    url: https://www.ugc.gov.in/Scholarships/stu_Scholarship1
+    source_type: government
+    discovery_role: detail
+
+  - name: UGC — Scholarships index
+    url: https://www.ugc.gov.in/page/Scholarships-Fellowships.aspx
+    source_type: government
+    discovery_role: hub
+
+  - name: AICTE — Scholarships
+    url: https://www.aicte-india.org/schemes/students-development-schemes
+    source_type: government
+    discovery_role: hub
+
+  - name: IIT Kanpur — MCM Scholarship
+    url: https://www.iitk.ac.in/sspc/sspc-mcm-scholarship
+    source_type: university
+    discovery_role: detail
+
+  - name: IIT Kanpur — FBM Scholarship
+    url: https://www.iitk.ac.in/sspc/sspc-fbm-scholarship
+    source_type: university
+    discovery_role: detail
+
+  - name: IIT Kanpur — Financial Aid
+    url: https://www.iitk.ac.in/financial-aid
+    source_type: university
+    discovery_role: hub
+
+  - name: Tata Trusts — Education
+    url: https://www.tatatrusts.org/our-work/education
+    source_type: ngo_trust
+    discovery_role: hub
+
+# Official-domain allowlist for primary-source verification
+official_domain_suffixes:
+  - .gov.in
+  - .nic.in
+  - .ac.in
+  - .edu.in
+  - scholarships.gov.in
+  - ugc.gov.in
+  - aicte-india.org
+  - education.gov.in
+  - socialjustice.gov.in
+  - tribal.nic.in
+  - minorityaffairs.gov.in
+  - reliancefoundation.org
+  - tatatrusts.org
+  - iitb.ac.in
+  - du.ac.in
+  - iisc.ac.in
+  - iitk.ac.in
+  - www.iitk.ac.in
+
+# Domains treated as aggregators (discovery OK, never primary)
+aggregator_domains:
+  - buddy4study.com
+  - scholarstays.com
+  - scholarships.com
+  - wikipedia.org
+  - medium.com
+  - quora.com

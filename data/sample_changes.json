@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "scholarship_id": 1,
+    "field": "closing_date",
+    "old_value": "2026-08-31",
+    "new_value": "2026-10-31",
+    "detected_at": "2026-10-03T03:44:18.071503",
+    "source_url": "https://scholarships.gov.in/All-Scholarships",
+    "evidence_snippet": "6-2026 Student Application Open till : 31-10-2026 Defective Application Verification Open till:15-11-2026 Institute Verification Open till:15-11-2026 DNO/SNO/MNO Verifi"
+  },
+  {
+    "id": 2,
+    "scholarship_id": 2,
+    "field": "closing_date",
+    "old_value": "2026-08-31",
+    "new_value": "2026-10-31",
+    "detected_at": "2026-10-03T03:44:18.075398",
+    "source_url": "https://scholarships.gov.in/All-Scholarships",
+    "evidence_snippet": "6-2026 Student Application Open till : 31-10-2026 Defective Application Verification Open till:15-11-2026 Institute Verification Open till:15-11-2026 DNO/SNO/MNO Verifi"
+  },
+  {
+    "id": 3,
+    "scholarship_id": 32,
+    "field": "lifecycle_status",
+    "old_value": "ACTIVE",
+    "new_value": "NO_LONGER_VERIFIABLE",
+    "detected_at": "2026-10-03T03:44:32.844634",
+    "source_url": "crawl://missing-from-source",
+    "evidence_snippet": "Scholarship not found on official source during re-crawl"
+  },
+  {
+    "id": 4,
+    "scholarship_id": 33,
+    "field": "lifecycle_status",
+    "old_value": "ACTIVE",
+    "new_value": "NO_LONGER_VERIFIABLE",
+    "detected_at": "2026-10-03T03:44:32.844634",
+    "source_url": "crawl://missing-from-source",
+    "evidence_snippet": "Scholarship not found on official source during re-crawl"
+  },
+  {
+    "id": 5,
+    "scholarship_id": 34,
+    "field": "lifecycle_status",
+    "old_value": "ACTIVE",
+    "new_value": "NO_LONGER_VERIFIABLE",
+    "detected_at": "2026-10-03T03:44:32.844634",
+    "source_url": "crawl://missing-from-source",
+    "evidence_snippet": "Scholarship not found on official source during re-crawl"
+  },
+  {
+    "id": 6,
+    "scholarship_id": 35,
+    "field": "lifecycle_status",
+    "old_value": "ACTIVE",
+    "new_value": "NO_LONGER_VERIFIABLE",
+    "detected_at": "2026-10-03T03:44:32.844634",
+    "source_url": "crawl://missing-from-source",
+    "evidence_snippet": "Scholarship not found on official source during re-crawl"
+  },
+  {
+    "id": 7,
+    "scholarship_id": 36,
+    "field": "lifecycle_status",
+    "old_value": "ACTIVE",
+    "new_value": "NO_LONGER_VERIFIABLE",
+    "detected_at": "2026-10-03T03:44:32.844634",
+    "source_url": "crawl://missing-from-source",
+    "evidence_snippet": "Scholarship not found on official source during re-crawl"
+  }
+]
