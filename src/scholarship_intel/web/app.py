@@ -40,9 +40,9 @@ def home(
     rows = store.list_scholarships(conn, q=q, status=status, label=label)
     conn.close()
     return templates.TemplateResponse(
+        request,
         "index.html",
         {
-            "request": request,
             "stats": stats,
             "rows": rows,
             "q": q or "",
@@ -74,9 +74,9 @@ def detail(request: Request, sid: int):
             evidence = {}
     conn.close()
     return templates.TemplateResponse(
+        request,
         "detail.html",
         {
-            "request": request,
             "s": row,
             "changes": changes,
             "conf": conf,
