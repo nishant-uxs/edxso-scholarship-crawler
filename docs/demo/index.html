@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scholarship Intelligence — Demo</title>
+  <style>
+    body { font-family: Segoe UI, system-ui, sans-serif; margin: 0; background: #f3efe6; color: #1a1f16; }
+    header { padding: 2rem; background: #fffdf8; border-bottom: 1px solid #d5d0c4; }
+    h1 { margin: 0 0 .5rem; font-family: Georgia, serif; }
+    main { max-width: 1100px; margin: 0 auto; padding: 1.5rem; }
+    .metrics { display: grid; grid-template-columns: repeat(auto-fit,minmax(140px,1fr)); gap: .75rem; }
+    .m { background: #fffdf8; border: 1px solid #d5d0c4; border-radius: 10px; padding: .9rem; }
+    .m b { display:block; font-size: 1.5rem; color: #0f6b4c; }
+    table { width: 100%; border-collapse: collapse; background: #fffdf8; margin: 1rem 0 2rem; }
+    th, td { border-bottom: 1px solid #d5d0c4; padding: .55rem .7rem; text-align: left; font-size: .9rem; }
+    th { background: #f0ebe0; }
+    code { background: #e8e4da; padding: .1rem .35rem; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Scholarship Intelligence — Working Demo</h1>
+    <p>Edxso Assignment 2 · sample crawl from official sources (NSP / UGC / IIT Kanpur)</p>
+  </header>
+  <main>
+    <section class="metrics">
+      <div class="m"><b>36</b>Total discovered</div>
+      <div class="m"><b>31</b>Verified (≥95%)</div>
+      <div class="m"><b>5</b>Review required</div>
+      <div class="m"><b>1</b>Expired</div>
+      <div class="m"><b>5</b>No longer verifiable</div>
+      <div class="m"><b>7</b>Change events</div>
+      <div class="m"><b>98.3%</b>Avg confidence</div>
+    </section>
+    <p>Source types: <code>{"government": 2, "government_portal": 31, "university": 3}</code></p>
+    <h2>Top scholarships (sample)</h2>
+    <table>
+      <thead><tr><th>Name</th><th>Provider</th><th>Confidence</th><th>Label</th><th>Status</th><th>Deadline</th></tr></thead>
+      <tbody><tr><td>Prime Minister'S Scholarship Scheme For Wards Of States/UTs Police Per</td><td>Government of India</td><td>100.0%</td><td>VERIFIED</td><td>EXPIRING_SOON</td><td>2026-10-31</td></tr><tr><td>Prime Minister'S Scholarship Scheme For Central Armed Police Forces An</td><td>Government of India</td><td>100.0%</td><td>VERIFIED</td><td>EXPIRING_SOON</td><td>2026-10-31</td></tr><tr><td>AICTE - Swanath Scholarship Scheme ( Technical Degree)</td><td>AICTE / Ministry of Education</td><td>100.0%</td><td>VERIFIED</td><td>EXPIRING_SOON</td><td>2026-10-31</td></tr><tr><td>PM USP Special Scholarship Scheme For Jammu Kashmir And Ladakh</td><td>Government of India</td><td>100.0%</td><td>VERIFIED</td><td>EXPIRING_SOON</td><td>2026-10-31</td></tr><tr><td>AICTE - Pragati Scholarship Scheme For Girl Students ( Technical Degre</td><td>AICTE / Ministry of Education</td><td>100.0%</td><td>VERIFIED</td><td>EXPIRING_SOON</td><td>2026-10-31</td></tr><tr><td>AICTE - Pragati Scholarship Scheme For Girl Students ( Technical Diplo</td><td>AICTE / Ministry of Education</td><td>100.0%</td><td>VERIFIED</td><td>EXPIRING_SOON</td><td>2026-10-31</td></tr><tr><td>AICTE - Saksham Scholarship Scheme For Specially Abled Student ( Techn</td><td>AICTE / Ministry of Education</td><td>100.0%</td><td>VERIFIED</td><td>EXPIRING_SOON</td><td>2026-10-31</td></tr><tr><td>AICTE - Saksham Scholarship Scheme For Specially Abled Student ( Techn</td><td>AICTE / Ministry of Education</td><td>100.0%</td><td>VERIFIED</td><td>EXPIRING_SOON</td><td>2026-10-31</td></tr><tr><td>AICTE - Swanath Scholarship Scheme (Technical Diploma)</td><td>AICTE / Ministry of Education</td><td>100.0%</td><td>VERIFIED</td><td>EXPIRING_SOON</td><td>2026-10-31</td></tr><tr><td>National Scholarship For Post Graduate Studies</td><td>University Grants Commission (UGC)</td><td>100.0%</td><td>VERIFIED</td><td>EXPIRING_SOON</td><td>2026-10-31</td></tr><tr><td>Ishan Uday Special Scholarship Scheme For NER</td><td>University Grants Commission (UGC)</td><td>100.0%</td><td>VERIFIED</td><td>EXPIRING_SOON</td><td>2026-10-31</td></tr><tr><td>Financial Assistance For Education To The Wards Of Beedi/Cine/Iomc/Lsd</td><td>Ministry of Labour & Employment</td><td>100.0%</td><td>VERIFIED</td><td>EXPIRING_SOON</td><td>2026-10-31</td></tr></tbody>
+    </table>
+    <h2>Change detection samples</h2>
+    <table>
+      <thead><tr><th>Field</th><th>Old</th><th>New</th><th>Detected</th></tr></thead>
+      <tbody><tr><td>closing_date</td><td>2026-08-31</td><td>2026-10-31</td><td>2026-10-03T03:44:18.071503</td></tr><tr><td>closing_date</td><td>2026-08-31</td><td>2026-10-31</td><td>2026-10-03T03:44:18.075398</td></tr><tr><td>lifecycle_status</td><td>ACTIVE</td><td>NO_LONGER_VERIFIABLE</td><td>2026-10-03T03:44:32.844634</td></tr><tr><td>lifecycle_status</td><td>ACTIVE</td><td>NO_LONGER_VERIFIABLE</td><td>2026-10-03T03:44:32.844634</td></tr><tr><td>lifecycle_status</td><td>ACTIVE</td><td>NO_LONGER_VERIFIABLE</td><td>2026-10-03T03:44:32.844634</td></tr><tr><td>lifecycle_status</td><td>ACTIVE</td><td>NO_LONGER_VERIFIABLE</td><td>2026-10-03T03:44:32.844634</td></tr><tr><td>lifecycle_status</td><td>ACTIVE</td><td>NO_LONGER_VERIFIABLE</td><td>2026-10-03T03:44:32.844634</td></tr></tbody>
+    </table>
+    <p>Live dashboard: <code>python -m scholarship_intel.cli serve</code> → http://127.0.0.1:8765</p>
+  </main>
+</body>
+</html>
