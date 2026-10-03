@@ -477,6 +477,15 @@ def extract_detail_page(
     )
 
 
+_SKIP_LINK = re.compile(
+    r"login|otrapplication|applicationform|payl/|usermanual|\.pdf$|nodalofficer|"
+    r"institutes$|/public$|/students$|/home$|sanctioned|institutesearch|"
+    r"aboutus|sitemap|faq|announcement|copyright|privacy|terms|disclaimer|"
+    r"helpdesk|cscurl|null$|officer|districtnodel",
+    re.I,
+)
+
+
 def discover_links(html: str, base_url: str, official_suffixes: list[str]) -> list[str]:
     from scholarship_intel.discovery.classify import is_aggregator, is_official_domain
 
@@ -485,6 +494,8 @@ def discover_links(html: str, base_url: str, official_suffixes: list[str]) -> li
     for a in soup.find_all("a", href=True):
         href = urljoin(base_url, a["href"])
         if href.startswith("mailto:") or href.startswith("javascript:"):
+            continue
+        if _SKIP_LINK.search(href):
             continue
         label = (a.get_text(" ", strip=True) + " " + href).lower()
         if not any(

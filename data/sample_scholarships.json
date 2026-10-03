@@ -1,5 +1,53 @@
 [
   {
+    "id": 10,
+    "name": "National Scholarship For Post Graduate Studies",
+    "provider": "University Grants Commission (UGC)",
+    "official_source_url": "https://scholarships.gov.in/All-Scholarships",
+    "application_url": "https://scholarships.gov.in/",
+    "source_type": "government_portal",
+    "amount_benefit": "Rs. 1,50,000 per annum",
+    "eligibility": "Merit-based scheme (as classified on NSP)",
+    "income_criteria": "Not specified",
+    "closing_date": "2026-10-31",
+    "lifecycle_status": "EXPIRING_SOON",
+    "confidence_score": 100.0,
+    "verification_label": "VERIFIED",
+    "last_verified_at": "2026-10-03T06:58:19.573410"
+  },
+  {
+    "id": 37,
+    "name": "Reliance Foundation Undergraduate Scholarships",
+    "provider": "Reliance Foundation",
+    "official_source_url": "https://www.scholarships.reliancefoundation.org/assets/pdf/UG_FAQ.pdf",
+    "application_url": "https://www.scholarships.reliancefoundation.org/assets/pdf/UG_FAQ.pdf",
+    "source_type": "corporate_csr",
+    "amount_benefit": "Rs. 15 lakh",
+    "eligibility": "To be eligible for the Reliance Foundation Undergraduate Scholarships, you must:",
+    "income_criteria": "Family income up to 15 lakh",
+    "closing_date": "2026-10-05",
+    "lifecycle_status": "EXPIRING_SOON",
+    "confidence_score": 100.0,
+    "verification_label": "VERIFIED",
+    "last_verified_at": "2026-10-03T06:58:20.645296"
+  },
+  {
+    "id": 40,
+    "name": "LADY MEHERBAI D TATA EDUCATION TRUST",
+    "provider": "Tata Trusts / Lady Meherbai D Tata Education Trust",
+    "official_source_url": "https://www.tatatrusts.org/Upload/Content_Files/scholarship-announcement-2026-2027.pdf",
+    "application_url": "https://www.tatatrusts.org/Upload/Content_Files/scholarship-announcement-2026-2027.pdf",
+    "source_type": "ngo_trust",
+    "amount_benefit": "Rs. 3 lakh",
+    "eligibility": " Indian women graduate from a reputed university.",
+    "income_criteria": "Not specified",
+    "closing_date": "2026-02-23",
+    "lifecycle_status": "EXPIRED",
+    "confidence_score": 97.0,
+    "verification_label": "VERIFIED",
+    "last_verified_at": "2026-10-03T06:58:05.051956"
+  },
+  {
     "id": 1,
     "name": "Prime Minister'S Scholarship Scheme For Wards Of States/UTs Police Personnel Martyred During Terror/Naxal Attacks",
     "provider": "Government of India",
@@ -8,11 +56,12 @@
     "source_type": "government_portal",
     "amount_benefit": "Not specified",
     "eligibility": "Merit-based scheme (as classified on NSP)",
+    "income_criteria": "Not specified",
     "closing_date": "2026-10-31",
     "lifecycle_status": "EXPIRING_SOON",
-    "confidence_score": 100.0,
+    "confidence_score": 96.0,
     "verification_label": "VERIFIED",
-    "last_verified_at": "2026-10-03T03:44:18.071503"
+    "last_verified_at": "2026-10-03T06:58:19.527670"
   },
   {
     "id": 2,
@@ -23,11 +72,12 @@
     "source_type": "government_portal",
     "amount_benefit": "Not specified",
     "eligibility": "Merit-based scheme (as classified on NSP)",
+    "income_criteria": "Not specified",
     "closing_date": "2026-10-31",
     "lifecycle_status": "EXPIRING_SOON",
-    "confidence_score": 100.0,
+    "confidence_score": 96.0,
     "verification_label": "VERIFIED",
-    "last_verified_at": "2026-10-03T03:44:18.074397"
+    "last_verified_at": "2026-10-03T06:58:19.534217"
   },
   {
     "id": 3,
@@ -38,11 +88,12 @@
     "source_type": "government_portal",
     "amount_benefit": "Not specified",
     "eligibility": "Welfare-based scheme (as classified on NSP)",
+    "income_criteria": "Not specified",
     "closing_date": "2026-10-31",
     "lifecycle_status": "EXPIRING_SOON",
-    "confidence_score": 100.0,
+    "confidence_score": 96.0,
     "verification_label": "VERIFIED",
-    "last_verified_at": "2026-10-03T03:44:18.076404"
+    "last_verified_at": "2026-10-03T06:58:19.538365"
   },
   {
     "id": 4,
@@ -53,11 +104,12 @@
     "source_type": "government_portal",
     "amount_benefit": "Not specified",
     "eligibility": "Merit-based scheme (as classified on NSP); Domicile: Jammu & Kashmir / Ladakh",
+    "income_criteria": "Not specified",
     "closing_date": "2026-10-31",
     "lifecycle_status": "EXPIRING_SOON",
-    "confidence_score": 100.0,
+    "confidence_score": 96.0,
     "verification_label": "VERIFIED",
-    "last_verified_at": "2026-10-03T03:44:18.078393"
+    "last_verified_at": "2026-10-03T06:58:19.541882"
   },
   {
     "id": 5,
@@ -68,11 +120,12 @@
     "source_type": "government_portal",
     "amount_benefit": "Not specified",
     "eligibility": "Merit-based scheme (as classified on NSP); Female (girl students)",
+    "income_criteria": "Not specified",
     "closing_date": "2026-10-31",
     "lifecycle_status": "EXPIRING_SOON",
-    "confidence_score": 100.0,
+    "confidence_score": 96.0,
     "verification_label": "VERIFIED",
-    "last_verified_at": "2026-10-03T03:44:18.079392"
+    "last_verified_at": "2026-10-03T06:58:19.546329"
   },
   {
     "id": 6,
@@ -83,11 +136,12 @@
     "source_type": "government_portal",
     "amount_benefit": "Not specified",
     "eligibility": "Merit-based scheme (as classified on NSP); Female (girl students)",
+    "income_criteria": "Not specified",
     "closing_date": "2026-10-31",
     "lifecycle_status": "EXPIRING_SOON",
-    "confidence_score": 100.0,
+    "confidence_score": 96.0,
     "verification_label": "VERIFIED",
-    "last_verified_at": "2026-10-03T03:44:18.081397"
+    "last_verified_at": "2026-10-03T06:58:19.550444"
   },
   {
     "id": 7,
@@ -98,11 +152,12 @@
     "source_type": "government_portal",
     "amount_benefit": "Not specified",
     "eligibility": "Welfare-based scheme (as classified on NSP)",
+    "income_criteria": "Not specified",
     "closing_date": "2026-10-31",
     "lifecycle_status": "EXPIRING_SOON",
-    "confidence_score": 100.0,
+    "confidence_score": 96.0,
     "verification_label": "VERIFIED",
-    "last_verified_at": "2026-10-03T03:44:18.083426"
+    "last_verified_at": "2026-10-03T06:58:19.553459"
   },
   {
     "id": 8,
@@ -113,11 +168,12 @@
     "source_type": "government_portal",
     "amount_benefit": "Not specified",
     "eligibility": "Welfare-based scheme (as classified on NSP)",
+    "income_criteria": "Not specified",
     "closing_date": "2026-10-31",
     "lifecycle_status": "EXPIRING_SOON",
-    "confidence_score": 100.0,
+    "confidence_score": 96.0,
     "verification_label": "VERIFIED",
-    "last_verified_at": "2026-10-03T03:44:18.084435"
+    "last_verified_at": "2026-10-03T06:58:19.562012"
   },
   {
     "id": 9,
@@ -128,26 +184,12 @@
     "source_type": "government_portal",
     "amount_benefit": "Not specified",
     "eligibility": "Welfare-based scheme (as classified on NSP)",
+    "income_criteria": "Not specified",
     "closing_date": "2026-10-31",
     "lifecycle_status": "EXPIRING_SOON",
-    "confidence_score": 100.0,
+    "confidence_score": 96.0,
     "verification_label": "VERIFIED",
-    "last_verified_at": "2026-10-03T03:44:18.085395"
-  },
-  {
-    "id": 10,
-    "name": "National Scholarship For Post Graduate Studies",
-    "provider": "University Grants Commission (UGC)",
-    "official_source_url": "https://scholarships.gov.in/All-Scholarships",
-    "application_url": "https://scholarships.gov.in/",
-    "source_type": "government_portal",
-    "amount_benefit": "Not specified",
-    "eligibility": "Merit-based scheme (as classified on NSP)",
-    "closing_date": "2026-10-31",
-    "lifecycle_status": "EXPIRING_SOON",
-    "confidence_score": 100.0,
-    "verification_label": "VERIFIED",
-    "last_verified_at": "2026-10-03T03:44:18.087394"
+    "last_verified_at": "2026-10-03T06:58:19.568709"
   },
   {
     "id": 11,
@@ -158,11 +200,12 @@
     "source_type": "government_portal",
     "amount_benefit": "Not specified",
     "eligibility": "Merit-based scheme (as classified on NSP); Domicile: North Eastern Region",
+    "income_criteria": "Not specified",
     "closing_date": "2026-10-31",
     "lifecycle_status": "EXPIRING_SOON",
-    "confidence_score": 100.0,
+    "confidence_score": 96.0,
     "verification_label": "VERIFIED",
-    "last_verified_at": "2026-10-03T03:44:18.089395"
+    "last_verified_at": "2026-10-03T06:58:19.577540"
   },
   {
     "id": 12,
@@ -173,11 +216,12 @@
     "source_type": "government_portal",
     "amount_benefit": "Not specified",
     "eligibility": "Welfare-based scheme (as classified on NSP)",
+    "income_criteria": "Not specified",
     "closing_date": "2026-10-31",
     "lifecycle_status": "EXPIRING_SOON",
-    "confidence_score": 100.0,
+    "confidence_score": 96.0,
     "verification_label": "VERIFIED",
-    "last_verified_at": "2026-10-03T03:44:18.091395"
+    "last_verified_at": "2026-10-03T06:58:19.583928"
   },
   {
     "id": 13,
@@ -188,11 +232,12 @@
     "source_type": "government_portal",
     "amount_benefit": "Not specified",
     "eligibility": "Welfare-based scheme (as classified on NSP)",
+    "income_criteria": "Not specified",
     "closing_date": "2026-10-31",
     "lifecycle_status": "EXPIRING_SOON",
-    "confidence_score": 100.0,
+    "confidence_score": 96.0,
     "verification_label": "VERIFIED",
-    "last_verified_at": "2026-10-03T03:44:18.092404"
+    "last_verified_at": "2026-10-03T06:58:19.590794"
   },
   {
     "id": 14,
@@ -203,11 +248,12 @@
     "source_type": "government_portal",
     "amount_benefit": "Not specified",
     "eligibility": "Merit-based scheme (as classified on NSP); Category focus: OBC, EBC, DNT",
+    "income_criteria": "Not specified",
     "closing_date": "2026-10-31",
     "lifecycle_status": "EXPIRING_SOON",
-    "confidence_score": 100.0,
+    "confidence_score": 96.0,
     "verification_label": "VERIFIED",
-    "last_verified_at": "2026-10-03T03:44:18.093396"
+    "last_verified_at": "2026-10-03T06:58:19.697844"
   },
   {
     "id": 15,
@@ -218,11 +264,12 @@
     "source_type": "government_portal",
     "amount_benefit": "Not specified",
     "eligibility": "Merit-based scheme (as classified on NSP); Category focus: OBC, EBC, DNT",
+    "income_criteria": "Not specified",
     "closing_date": "2026-10-31",
     "lifecycle_status": "EXPIRING_SOON",
-    "confidence_score": 100.0,
+    "confidence_score": 96.0,
     "verification_label": "VERIFIED",
-    "last_verified_at": "2026-10-03T03:44:18.096396"
+    "last_verified_at": "2026-10-03T06:58:19.736622"
   },
   {
     "id": 16,
@@ -233,11 +280,12 @@
     "source_type": "government_portal",
     "amount_benefit": "Not specified",
     "eligibility": "Merit-based scheme (as classified on NSP)",
+    "income_criteria": "Not specified",
     "closing_date": "2026-10-31",
     "lifecycle_status": "EXPIRING_SOON",
-    "confidence_score": 100.0,
+    "confidence_score": 96.0,
     "verification_label": "VERIFIED",
-    "last_verified_at": "2026-10-03T03:44:18.097426"
+    "last_verified_at": "2026-10-03T06:58:19.746184"
   },
   {
     "id": 17,
@@ -248,11 +296,12 @@
     "source_type": "government_portal",
     "amount_benefit": "Not specified",
     "eligibility": "Merit-based scheme (as classified on NSP)",
+    "income_criteria": "Not specified",
     "closing_date": "2026-10-31",
     "lifecycle_status": "EXPIRING_SOON",
-    "confidence_score": 100.0,
+    "confidence_score": 96.0,
     "verification_label": "VERIFIED",
-    "last_verified_at": "2026-10-03T03:44:18.099396"
+    "last_verified_at": "2026-10-03T06:58:19.764721"
   },
   {
     "id": 18,
@@ -263,11 +312,12 @@
     "source_type": "government_portal",
     "amount_benefit": "Not specified",
     "eligibility": "Merit-based scheme (as classified on NSP)",
+    "income_criteria": "Not specified",
     "closing_date": "2026-10-31",
     "lifecycle_status": "EXPIRING_SOON",
-    "confidence_score": 100.0,
+    "confidence_score": 96.0,
     "verification_label": "VERIFIED",
-    "last_verified_at": "2026-10-03T03:44:18.100396"
+    "last_verified_at": "2026-10-03T06:58:19.776339"
   },
   {
     "id": 19,
@@ -278,11 +328,12 @@
     "source_type": "government_portal",
     "amount_benefit": "Not specified",
     "eligibility": "Merit-based scheme (as classified on NSP)",
+    "income_criteria": "Not specified",
     "closing_date": "2026-10-31",
     "lifecycle_status": "EXPIRING_SOON",
-    "confidence_score": 100.0,
+    "confidence_score": 96.0,
     "verification_label": "VERIFIED",
-    "last_verified_at": "2026-10-03T03:44:18.102397"
+    "last_verified_at": "2026-10-03T06:58:19.782781"
   },
   {
     "id": 20,
@@ -293,11 +344,12 @@
     "source_type": "government_portal",
     "amount_benefit": "Not specified",
     "eligibility": "Merit-based scheme (as classified on NSP)",
+    "income_criteria": "Not specified",
     "closing_date": "2026-10-31",
     "lifecycle_status": "EXPIRING_SOON",
-    "confidence_score": 100.0,
+    "confidence_score": 96.0,
     "verification_label": "VERIFIED",
-    "last_verified_at": "2026-10-03T03:44:18.104394"
+    "last_verified_at": "2026-10-03T06:58:19.792351"
   },
   {
     "id": 21,
@@ -308,11 +360,12 @@
     "source_type": "government_portal",
     "amount_benefit": "Not specified",
     "eligibility": "Merit-based scheme (as classified on NSP)",
+    "income_criteria": "Not specified",
     "closing_date": "2026-10-31",
     "lifecycle_status": "EXPIRING_SOON",
-    "confidence_score": 100.0,
+    "confidence_score": 96.0,
     "verification_label": "VERIFIED",
-    "last_verified_at": "2026-10-03T03:44:18.105417"
+    "last_verified_at": "2026-10-03T06:58:19.802193"
   },
   {
     "id": 22,
@@ -323,11 +376,12 @@
     "source_type": "government_portal",
     "amount_benefit": "Not specified",
     "eligibility": "Merit-based scheme (as classified on NSP); Category focus: SC",
+    "income_criteria": "Not specified",
     "closing_date": "2026-10-31",
     "lifecycle_status": "EXPIRING_SOON",
-    "confidence_score": 100.0,
+    "confidence_score": 96.0,
     "verification_label": "VERIFIED",
-    "last_verified_at": "2026-10-03T03:44:18.107427"
+    "last_verified_at": "2026-10-03T06:58:19.956365"
   },
   {
     "id": 23,
@@ -338,11 +392,12 @@
     "source_type": "government_portal",
     "amount_benefit": "Not specified",
     "eligibility": "Welfare-based scheme (as classified on NSP)",
+    "income_criteria": "Not specified",
     "closing_date": "2026-10-31",
     "lifecycle_status": "EXPIRING_SOON",
-    "confidence_score": 100.0,
+    "confidence_score": 96.0,
     "verification_label": "VERIFIED",
-    "last_verified_at": "2026-10-03T03:44:18.109430"
+    "last_verified_at": "2026-10-03T06:58:19.965266"
   },
   {
     "id": 24,
@@ -353,11 +408,12 @@
     "source_type": "government_portal",
     "amount_benefit": "Not specified",
     "eligibility": "Welfare-based scheme (as classified on NSP)",
+    "income_criteria": "Not specified",
     "closing_date": "2026-10-31",
     "lifecycle_status": "EXPIRING_SOON",
-    "confidence_score": 100.0,
+    "confidence_score": 96.0,
     "verification_label": "VERIFIED",
-    "last_verified_at": "2026-10-03T03:44:18.111433"
+    "last_verified_at": "2026-10-03T06:58:19.977352"
   },
   {
     "id": 25,
@@ -368,11 +424,12 @@
     "source_type": "government_portal",
     "amount_benefit": "Not specified",
     "eligibility": "Welfare-based scheme (as classified on NSP)",
+    "income_criteria": "Not specified",
     "closing_date": "2026-10-31",
     "lifecycle_status": "EXPIRING_SOON",
-    "confidence_score": 100.0,
+    "confidence_score": 96.0,
     "verification_label": "VERIFIED",
-    "last_verified_at": "2026-10-03T03:44:18.112939"
+    "last_verified_at": "2026-10-03T06:58:20.086588"
   },
   {
     "id": 26,
@@ -383,11 +440,12 @@
     "source_type": "government_portal",
     "amount_benefit": "Not specified",
     "eligibility": "Welfare-based scheme (as classified on NSP)",
+    "income_criteria": "Not specified",
     "closing_date": "2026-10-31",
     "lifecycle_status": "EXPIRING_SOON",
-    "confidence_score": 100.0,
+    "confidence_score": 96.0,
     "verification_label": "VERIFIED",
-    "last_verified_at": "2026-10-03T03:44:18.113954"
+    "last_verified_at": "2026-10-03T06:58:20.093547"
   },
   {
     "id": 27,
@@ -398,11 +456,12 @@
     "source_type": "government_portal",
     "amount_benefit": "Not specified",
     "eligibility": "Merit-based scheme (as classified on NSP)",
+    "income_criteria": "Not specified",
     "closing_date": "2026-10-31",
     "lifecycle_status": "EXPIRING_SOON",
-    "confidence_score": 100.0,
+    "confidence_score": 96.0,
     "verification_label": "VERIFIED",
-    "last_verified_at": "2026-10-03T03:44:18.116948"
+    "last_verified_at": "2026-10-03T06:58:20.119233"
   },
   {
     "id": 29,
@@ -413,11 +472,12 @@
     "source_type": "government_portal",
     "amount_benefit": "Not specified",
     "eligibility": "Merit-based scheme (as classified on NSP); Category focus: ST",
+    "income_criteria": "Not specified",
     "closing_date": "2026-10-31",
     "lifecycle_status": "EXPIRING_SOON",
-    "confidence_score": 100.0,
+    "confidence_score": 96.0,
     "verification_label": "VERIFIED",
-    "last_verified_at": "2026-10-03T03:44:18.119965"
+    "last_verified_at": "2026-10-03T06:58:20.449395"
   },
   {
     "id": 30,
@@ -428,11 +488,12 @@
     "source_type": "government_portal",
     "amount_benefit": "Not specified",
     "eligibility": "Merit-based scheme (as classified on NSP); Domicile: North Eastern Region",
+    "income_criteria": "Not specified",
     "closing_date": "2026-10-31",
     "lifecycle_status": "EXPIRING_SOON",
-    "confidence_score": 100.0,
+    "confidence_score": 96.0,
     "verification_label": "VERIFIED",
-    "last_verified_at": "2026-10-03T03:44:18.121454"
+    "last_verified_at": "2026-10-03T06:58:20.458412"
   },
   {
     "id": 31,
@@ -443,11 +504,12 @@
     "source_type": "government_portal",
     "amount_benefit": "Not specified",
     "eligibility": "Merit-based scheme (as classified on NSP)",
+    "income_criteria": "Not specified",
     "closing_date": "2026-10-31",
     "lifecycle_status": "EXPIRING_SOON",
-    "confidence_score": 100.0,
+    "confidence_score": 96.0,
     "verification_label": "VERIFIED",
-    "last_verified_at": "2026-10-03T03:44:18.123463"
+    "last_verified_at": "2026-10-03T06:58:20.593580"
   },
   {
     "id": 28,
@@ -458,11 +520,12 @@
     "source_type": "government_portal",
     "amount_benefit": "Not specified",
     "eligibility": "Merit-based scheme (as classified on NSP)",
+    "income_criteria": "Not specified",
     "closing_date": "2026-09-30",
     "lifecycle_status": "EXPIRED",
-    "confidence_score": 95.0,
-    "verification_label": "VERIFIED",
-    "last_verified_at": "2026-10-03T03:44:18.117980"
+    "confidence_score": 91.0,
+    "verification_label": "REVIEW_REQUIRED",
+    "last_verified_at": "2026-10-03T06:58:20.248742"
   },
   {
     "id": 32,
@@ -473,11 +536,12 @@
     "source_type": "government",
     "amount_benefit": "Rs. 1,50,000 per annum",
     "eligibility": "Students who are admitted in the first year of PG degree programme through ‘Regular/Full Time’ mode in an eligible university/ college/institution are eligible to apply. In case of integrated programmes, the scholarship shall be given for PG component only. The age limit is 30 years. The scholarship is available only for students who are pursuing recognized PG degree programmes leading to specified PG degrees notified by UGC from time to time i.e. the nomenclature and duration of course should be as per UGC Notification on Specification of Degrees, 2014, as amended from time to time.",
+    "income_criteria": "Not specified",
     "closing_date": "Not specified",
-    "lifecycle_status": "NO_LONGER_VERIFIABLE",
-    "confidence_score": 93.0,
+    "lifecycle_status": "ACTIVE",
+    "confidence_score": 90.0,
     "verification_label": "REVIEW_REQUIRED",
-    "last_verified_at": "2026-10-03T03:44:21.178682"
+    "last_verified_at": "2026-10-03T06:58:20.598587"
   },
   {
     "id": 33,
@@ -488,11 +552,12 @@
     "source_type": "government",
     "amount_benefit": "Rs. 37,200 per annum",
     "eligibility": "The First & Second Rank holders at UG level and admitted in any Postgraduate Course would be awarded the scholarship.",
+    "income_criteria": "Not specified",
     "closing_date": "Not specified",
-    "lifecycle_status": "NO_LONGER_VERIFIABLE",
-    "confidence_score": 93.0,
+    "lifecycle_status": "ACTIVE",
+    "confidence_score": 90.0,
     "verification_label": "REVIEW_REQUIRED",
-    "last_verified_at": "2026-10-03T03:44:21.993069"
+    "last_verified_at": "2026-10-03T06:58:20.604109"
   },
   {
     "id": 34,
@@ -503,11 +568,12 @@
     "source_type": "university",
     "amount_benefit": "Not specified",
     "eligibility": "An undergraduate (UG) student in the 4-year, 5-year, or 2-year M.Sc. program can receive the MCM scholarship subject to the following criteria/conditions:",
+    "income_criteria": "Family income up to 8.0 lacs",
     "closing_date": "Not specified",
-    "lifecycle_status": "NO_LONGER_VERIFIABLE",
+    "lifecycle_status": "ACTIVE",
     "confidence_score": 88.0,
     "verification_label": "REVIEW_REQUIRED",
-    "last_verified_at": "2026-10-03T03:44:26.937128"
+    "last_verified_at": "2026-10-03T06:58:20.616658"
   },
   {
     "id": 35,
@@ -518,11 +584,44 @@
     "source_type": "university",
     "amount_benefit": "Not specified",
     "eligibility": "The students belonging to SC/ST categories only are eligible to receive the FBM scholarship.",
+    "income_criteria": "Family income up to 4.5 lacs",
     "closing_date": "Not specified",
-    "lifecycle_status": "NO_LONGER_VERIFIABLE",
+    "lifecycle_status": "ACTIVE",
     "confidence_score": 88.0,
     "verification_label": "REVIEW_REQUIRED",
-    "last_verified_at": "2026-10-03T03:44:27.936118"
+    "last_verified_at": "2026-10-03T06:58:20.620199"
+  },
+  {
+    "id": 38,
+    "name": "Reliance Foundation Scholarships",
+    "provider": "Reliance Foundation",
+    "official_source_url": "https://www.reliancefoundation.org/media/media-release/Reliance_Foundation_Scholarships_2026-27",
+    "application_url": "https://scholarships.reliancefoundation.org/",
+    "source_type": "corporate_csr",
+    "amount_benefit": "Rs. 2 lakh",
+    "eligibility": "https://scholarships.reliancefoundation.org/",
+    "income_criteria": "Not specified",
+    "closing_date": "Not specified",
+    "lifecycle_status": "REVIEW_REQUIRED",
+    "confidence_score": 85.0,
+    "verification_label": "REVIEW_REQUIRED",
+    "last_verified_at": "2026-10-03T06:58:20.659668"
+  },
+  {
+    "id": 39,
+    "name": "Means Grant program",
+    "provider": "Tata Trusts / Lady Meherbai D Tata Education Trust",
+    "official_source_url": "https://www.tatatrusts.org/Upload/Content_Files/means-grant-programme.pdf",
+    "application_url": "https://www.tatatrusts.org/Upload/Content_Files/means-grant-programme.pdf",
+    "source_type": "ngo_trust",
+    "amount_benefit": "Rs. ,",
+    "eligibility": "criteria for the Means Grant program is given below :",
+    "income_criteria": "Not specified",
+    "closing_date": "Not specified",
+    "lifecycle_status": "REVIEW_REQUIRED",
+    "confidence_score": 85.0,
+    "verification_label": "REVIEW_REQUIRED",
+    "last_verified_at": "2026-10-03T06:58:05.047907"
   },
   {
     "id": 36,
@@ -533,10 +632,27 @@
     "source_type": "university",
     "amount_benefit": "Rs. 1000 per month",
     "eligibility": "Not specified",
+    "income_criteria": "Family income up to 6.0 Lakhs",
     "closing_date": "Not specified",
-    "lifecycle_status": "NO_LONGER_VERIFIABLE",
-    "confidence_score": 81.0,
+    "lifecycle_status": "ACTIVE",
+    "confidence_score": 82.0,
     "verification_label": "REVIEW_REQUIRED",
-    "last_verified_at": "2026-10-03T03:44:30.337879"
+    "last_verified_at": "2026-10-03T06:58:20.637280"
+  },
+  {
+    "id": 41,
+    "name": "Award Schedule",
+    "provider": "Tata Trusts",
+    "official_source_url": "https://ladytatatrust.tatatrusts.org/StaticPageIndia/Awards/3",
+    "application_url": "https://ladytatatrust.tatatrusts.org/StaticPageIndia/Awards/5",
+    "source_type": "ngo_trust",
+    "amount_benefit": "Not specified",
+    "eligibility": "Not specified",
+    "income_criteria": "Not specified",
+    "closing_date": "Not specified",
+    "lifecycle_status": "REVIEW_REQUIRED",
+    "confidence_score": 67.0,
+    "verification_label": "REVIEW_REQUIRED",
+    "last_verified_at": "2026-10-03T06:58:05.056460"
   }
 ]

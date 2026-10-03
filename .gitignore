@@ -9,6 +9,7 @@ __pycache__/
 data/scholarships.db
 data/scholarships.db-journal
 !data/scholarships.sample.db
+!data/official_docs/
 !data/.gitkeep
 htmlcov/
 dist/

@@ -43,18 +43,21 @@ From [`data/sample_scholarships.json`](data/sample_scholarships.json) + [`data/s
 
 | Metric | Value |
 |--------|-------|
-| Scholarships discovered | **36** |
-| VERIFIED (≥95%) | **31 / 36** |
-| REVIEW_REQUIRED | **5** |
-| Avg confidence | **98.3%** |
-| Change events | **7** |
-| Source types | government_portal · government · university |
+| Scholarships discovered | **41** |
+| VERIFIED (≥95%) | **32 / 41** |
+| REVIEW_REQUIRED | **9** |
+| With evidenced amount | **8** |
+| With evidenced income | **4** |
+| Avg confidence | **93.8%** |
+| Change events | **2+** |
+| Source types | government_portal · government · university · corporate_csr · ngo_trust |
 
 Example VERIFIED schemes from the real crawl:
 
-- *AICTE — Pragati Scholarship Scheme For Girl Students* — **100%**
-- *National Scholarship For Post Graduate Studies* (NSP listing) — **100%**
-- *PM-USP Central Sector Scheme (CSSS)* — **95%** (EXPIRED — application closed on official portal)
+- *Reliance Foundation Undergraduate Scholarships* — **100%** (official FAQ PDF: amount, income, deadline)
+- *National Scholarship For Post Graduate Studies* (NSP + UGC cross-enrich) — **100%**
+- *Lady Meherbai D Tata Education Trust* — **97%** (official PDF)
+- *AICTE — Pragati Scholarship Scheme For Girl Students* — **96%**
 
 ## Submission pack (Assignment §14)
 
@@ -92,13 +95,14 @@ From a real crawl of official sources:
 
 | Metric | Value |
 |--------|-------|
-| Total discovered | **36** |
-| Verified against primary/official sources | **31** |
-| Confidence ≥ 95% | **31** |
-| Source types (≥3) | government_portal, government, university |
-| Change detection examples | **2+** deadline diffs (`2026-08-31` → `2026-10-31`) |
-| Expired / stale examples | **1 EXPIRED** + **5 NO_LONGER_VERIFIABLE** |
-| Avg confidence | **98.3%** |
+| Total discovered | **41** |
+| Verified against primary/official sources | **32** |
+| Confidence ≥ 95% | **32** |
+| Source types (≥3) | **5** — government_portal, government, university, corporate_csr, ngo_trust |
+| Change detection examples | **2** deadline diffs (`2026-08-31` → `2026-10-31`) |
+| Expired / stale examples | **2 EXPIRED** (e.g. NSP CSSS closed + Lady Meherbai window closed) |
+| Fields with amount / income evidence | **8 / 4** |
+| Avg confidence | **93.8%** |
 
 **Integrity:** no fabricated amounts, incomes, or deadlines. Thin official cards keep those fields as `Not specified`.
 
@@ -286,8 +290,9 @@ flowchart LR
 |-------|--------|----------|
 | Discover | `pipeline.py` + `config/seeds.yaml` | Seed hubs + in-page link discovery on official domains |
 | Classify | `discovery/classify.py` | Official allowlist vs aggregator blocklist; source type |
-| Crawl | `fetch.py` | Polite httpx fetch with redirects |
-| Extract | `extract/parsers.py` | NSP listing cards + UGC/university detail parsers |
+| Crawl | `fetch.py` | Polite httpx fetch + local cached official PDFs |
+| Extract | `extract/parsers.py` + `documents.py` | NSP cards, HTML detail pages, official PDF text |
+| Enrich | `enrich.py` | Cross-fill evidenced fields across matching names (NSP↔UGC) |
 | Verify | `verify/engine.py` | Deterministic weighted confidence (no LLM score) |
 | Store | `store/db.py` | SQLite upsert + `change_events` history |
 | UI | `web/app.py` | Searchable dashboard + detail evidence view |
@@ -377,6 +382,7 @@ data/
 | SQLite (stdlib) | Yes | Repository + change log |
 | [FastAPI](https://fastapi.tiangolo.com/) + Jinja2 | Yes | Dashboard UI |
 | [PyYAML](https://pyyaml.org/) | Yes | Seeds / allowlist config |
+| [pypdf](https://pypi.org/project/pypdf/) | Yes | Official PDF text extraction (Reliance / Tata Trusts) |
 | pytest | Dev | Unit tests (`tests/`) |
 
 **No paid APIs / scrape services.** Free & open-source stack only.

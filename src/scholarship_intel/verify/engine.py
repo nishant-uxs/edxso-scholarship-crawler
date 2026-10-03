@@ -24,12 +24,13 @@ from scholarship_intel.models import (
 # official domain > live page > apply URL > evidenced eligibility > dates
 # scores >=95 without inventing amount fields.
 WEIGHTS = {
-    "official_source_domain": 30.0,
-    "present_on_official_page": 20.0,
+    "official_source_domain": 28.0,
+    "present_on_official_page": 18.0,
     "has_application_url": 10.0,
     "eligibility_evidenced": 12.0,
     "deadline_evidenced": 12.0,
-    "amount_evidenced": 5.0,
+    "amount_evidenced": 6.0,
+    "income_evidenced": 4.0,
     "not_aggregator_primary": 8.0,
     "source_type_known": 3.0,
     "information_current": 5.0,
@@ -98,6 +99,13 @@ def score_scholarship(
     else:
         factors["amount_evidenced"] = 0.0
         reasons.append("Amount not specified on source - left as Not specified (no hallucination).")
+
+    if _has_evidence(rec.income_criteria):
+        factors["income_evidenced"] = WEIGHTS["income_evidenced"]
+        reasons.append("Income criteria evidenced from source text.")
+    else:
+        factors["income_evidenced"] = 0.0
+        reasons.append("Income criteria not specified on source.")
 
     if not is_aggregator(rec.official_source_url, aggregator_domains) and rec.source_type != SourceType.AGGREGATOR:
         factors["not_aggregator_primary"] = WEIGHTS["not_aggregator_primary"]

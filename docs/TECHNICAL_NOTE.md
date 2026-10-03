@@ -98,10 +98,12 @@ Demo: `python scripts/finalize_demo.py` (or `scholarship-intel demo-changes`).
 
 Typical live run against official sources:
 
-- **36** scholarships discovered
-- **31** VERIFIED (confidence ≥ 95%) against primary portals
-- Source types: `government_portal`, `government`, `university`
-- Change events and expired / no-longer-verifiable examples present in DB
+- **41** scholarships discovered
+- **32** VERIFIED (confidence ≥ 95%) against primary portals / official PDFs
+- Source types: `government_portal`, `government`, `university`, `corporate_csr`, `ngo_trust`
+- Cross-enrichment fills evidenced amount/eligibility across matching NSP↔UGC names
+- Change events + **2 EXPIRED** examples present in DB
+- Official PDF cache under `data/official_docs/` (Reliance FAQ, Tata Means Grant, Lady Meherbai)
 
 ## 9. How to run
 

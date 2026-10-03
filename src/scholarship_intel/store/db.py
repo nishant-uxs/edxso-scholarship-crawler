@@ -302,6 +302,46 @@ def mark_missing_as_unverifiable(conn: sqlite3.Connection, seen_slugs: set[str])
     return n
 
 
+def mark_missing_listing(
+    conn: sqlite3.Connection,
+    seen_slugs: set[str],
+    source_url_substr: str,
+) -> int:
+    """Mark listing-sourced rows missing from a re-crawl of the same listing."""
+    rows = conn.execute(
+        "SELECT id, slug, lifecycle_status, official_source_url FROM scholarships "
+        "WHERE official_source_url LIKE ? AND lifecycle_status IN ('ACTIVE','EXPIRING_SOON','EXPIRED')",
+        (f"%{source_url_substr}%",),
+    ).fetchall()
+    n = 0
+    now = datetime.utcnow().isoformat()
+    for row in rows:
+        if row["slug"] in seen_slugs:
+            continue
+        old = row["lifecycle_status"]
+        conn.execute(
+            "UPDATE scholarships SET lifecycle_status=?, last_seen_at=? WHERE id=?",
+            (LifecycleStatus.NO_LONGER_VERIFIABLE.value, now, row["id"]),
+        )
+        conn.execute(
+            """INSERT INTO change_events
+               (scholarship_id, field, old_value, new_value, detected_at, source_url, evidence_snippet)
+               VALUES (?, ?, ?, ?, ?, ?, ?)""",
+            (
+                row["id"],
+                "lifecycle_status",
+                old,
+                LifecycleStatus.NO_LONGER_VERIFIABLE.value,
+                now,
+                row["official_source_url"],
+                f"No longer present on listing page containing '{source_url_substr}'",
+            ),
+        )
+        n += 1
+    conn.commit()
+    return n
+
+
 def list_scholarships(
     conn: sqlite3.Connection,
     q: str | None = None,

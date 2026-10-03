@@ -45,6 +45,6 @@ def classify_source_type(url: str, hint: str | None = None) -> SourceType:
         return SourceType.GOVERNMENT
     if any(x in host for x in ("reliancefoundation", "infosys", "tcs", "wipro", "google")):
         return SourceType.CORPORATE_CSR
-    if any(x in host for x in ("trust", "foundation", "ngo")):
+    if any(x in host for x in ("tatatrusts", "ladytatatrust", "trust", "foundation", "ngo")):
         return SourceType.NGO_TRUST
     return SourceType.UNKNOWN

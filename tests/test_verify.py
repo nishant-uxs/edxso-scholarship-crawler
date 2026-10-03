@@ -41,3 +41,36 @@ def test_no_hallucinated_amount_is_ok():
         amount_benefit=FieldValue.not_specified(),
     )
     assert rec.amount_benefit.value == "Not specified"
+
+
+def test_income_and_amount_boost_score():
+    rec = ScholarshipRecord(
+        slug="rf",
+        name="Reliance Foundation Undergraduate Scholarships",
+        provider="Reliance Foundation",
+        official_source_url="https://www.scholarships.reliancefoundation.org/assets/pdf/UG_FAQ.pdf",
+        application_url="https://www.scholarships.reliancefoundation.org/",
+        source_type=SourceType.CORPORATE_CSR,
+        eligibility=FieldValue.specified(
+            "Indian citizen", "eligibility", "https://example.com", "Indian citizen"
+        ),
+        amount_benefit=FieldValue.specified(
+            "Rs. 2 lakhs", "amount_benefit", "https://example.com", "Rs. 2 lakhs"
+        ),
+        income_criteria=FieldValue.specified(
+            "Household income 15 lakh or less", "income_criteria", "https://example.com", "15 lakh"
+        ),
+        closing_date=FieldValue.specified(
+            "2026-10-05", "closing_date", "https://example.com", "5 October 2026"
+        ),
+        lifecycle_status=LifecycleStatus.EXPIRING_SOON,
+    )
+    conf = score_scholarship(
+        rec,
+        official_suffixes=["reliancefoundation.org", "scholarships.reliancefoundation.org"],
+        aggregator_domains=["buddy4study.com"],
+        page_fetch_ok=True,
+    )
+    assert conf.score >= 95
+    assert conf.factors.get("income_evidenced", 0) > 0
+    assert conf.factors.get("amount_evidenced", 0) > 0

@@ -1,5 +1,6 @@
 # Seed sources for discovery. The crawler follows links from these pages
 # and classifies new domains — not a hard-coded one-URL-one-scraper list.
+# Local PDFs are cached copies of official documents (same bytes as source URL).
 
 seeds:
   - name: National Scholarship Portal — All Schemes
@@ -7,30 +8,15 @@ seeds:
     source_type: government_portal
     discovery_role: listing
 
-  - name: National Scholarship Portal — Home
-    url: https://scholarships.gov.in/
-    source_type: government_portal
-    discovery_role: hub
-
   - name: UGC — National Scholarship for PG Studies
     url: https://www.ugc.gov.in/Scholarships/stu_Scholarship6
     source_type: government
     discovery_role: detail
 
-  - name: UGC — Ishan Uday
+  - name: UGC — University Rank Holders
     url: https://www.ugc.gov.in/Scholarships/stu_Scholarship1
     source_type: government
     discovery_role: detail
-
-  - name: UGC — Scholarships index
-    url: https://www.ugc.gov.in/page/Scholarships-Fellowships.aspx
-    source_type: government
-    discovery_role: hub
-
-  - name: AICTE — Scholarships
-    url: https://www.aicte-india.org/schemes/students-development-schemes
-    source_type: government
-    discovery_role: hub
 
   - name: IIT Kanpur — MCM Scholarship
     url: https://www.iitk.ac.in/sspc/sspc-mcm-scholarship
@@ -45,14 +31,36 @@ seeds:
   - name: IIT Kanpur — Financial Aid
     url: https://www.iitk.ac.in/financial-aid
     source_type: university
-    discovery_role: hub
+    discovery_role: detail
 
-  - name: Tata Trusts — Education
-    url: https://www.tatatrusts.org/our-work/education
+  - name: Reliance Foundation UG FAQ (official PDF, cached)
+    url: local:data/official_docs/reliance_ug_faq.pdf
+    official_url: https://www.scholarships.reliancefoundation.org/assets/pdf/UG_FAQ.pdf
+    source_type: corporate_csr
+    discovery_role: detail
+
+  - name: Reliance Foundation Scholarships 2026-27 announcement
+    url: https://www.reliancefoundation.org/media/media-release/Reliance_Foundation_Scholarships_2026-27
+    source_type: corporate_csr
+    discovery_role: detail
+
+  - name: Tata Trusts Means Grant programme (official PDF, cached)
+    url: local:data/official_docs/tata_means_grant.pdf
+    official_url: https://www.tatatrusts.org/Upload/Content_Files/means-grant-programme.pdf
     source_type: ngo_trust
-    discovery_role: hub
+    discovery_role: detail
 
-# Official-domain allowlist for primary-source verification
+  - name: Lady Meherbai D Tata Education Trust 2026-27 (official PDF, cached)
+    url: local:data/official_docs/lady_meherbai_2026_27.pdf
+    official_url: https://www.tatatrusts.org/Upload/Content_Files/scholarship-announcement-2026-2027.pdf
+    source_type: ngo_trust
+    discovery_role: detail
+
+  - name: Lady Tata Memorial Trust — Award schedule
+    url: https://ladytatatrust.tatatrusts.org/StaticPageIndia/Awards/3
+    source_type: ngo_trust
+    discovery_role: detail
+
 official_domain_suffixes:
   - .gov.in
   - .nic.in
@@ -66,14 +74,12 @@ official_domain_suffixes:
   - tribal.nic.in
   - minorityaffairs.gov.in
   - reliancefoundation.org
+  - scholarships.reliancefoundation.org
   - tatatrusts.org
-  - iitb.ac.in
-  - du.ac.in
-  - iisc.ac.in
+  - ladytatatrust.tatatrusts.org
   - iitk.ac.in
   - www.iitk.ac.in
 
-# Domains treated as aggregators (discovery OK, never primary)
 aggregator_domains:
   - buddy4study.com
   - scholarstays.com
