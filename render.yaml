@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: edxso-scholarship-crawler
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PYTHONPATH
+        value: src
+      - key: SCHOLARSHIP_DB
+        value: /app/data/scholarships.db
+    healthCheckPath: /
