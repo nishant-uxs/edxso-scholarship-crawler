@@ -59,7 +59,8 @@ Example VERIFIED schemes from the real crawl:
 - *Lady Meherbai D Tata Education Trust* — **97%** (official PDF)
 - *AICTE — Pragati Scholarship Scheme For Girl Students* — **96%**
 
-**Live demo:** https://edxso-scholarship-crawler.vercel.app  
+**Live demo (static):** https://edxso-scholarship-crawler.vercel.app  
+**Live dashboard (FastAPI):** https://edxso-scholarship-crawler.onrender.com  
 **Repo:** https://github.com/nishant-uxs/edxso-scholarship-crawler
 
 ## Submission pack (Assignment §14)
@@ -67,6 +68,7 @@ Example VERIFIED schemes from the real crawl:
 | Requirement | Link / location |
 |-------------|-----------------|
 | Live demo | https://edxso-scholarship-crawler.vercel.app |
+| Live dashboard | https://edxso-scholarship-crawler.onrender.com |
 | GitHub repository | https://github.com/nishant-uxs/edxso-scholarship-crawler |
 | README / documentation | This file + [Architecture](#architecture) |
 | Working demo / screenshots | [docs/screenshots/](docs/screenshots/) · [docs/demo/](docs/demo/) |
